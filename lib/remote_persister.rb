@@ -1,3 +1,5 @@
+require 'dalli'
+
 class RemotePersister
   @@key = "json"
 
@@ -7,7 +9,7 @@ class RemotePersister
     password = ENV['MEMCACHE_PASSWORD']
 
     puts "Connecting to dalli server #{server}, username #{user}, password #{password}"
-    @dalli_cache = Dalli::Client.new server
+    @dalli_cache = Dalli::Client.new server, :username => user, :password => password
   end
 
   def reset
@@ -16,7 +18,7 @@ class RemotePersister
   end
 
   def save data
-    puts "* SAVING DATA TO REMOTE CACHE: #{data}..."
+    puts "* SAVING DATA TO REMOTE CACHE: #{data}"
     @dalli_cache.set @@key, data
     data
   end
