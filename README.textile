@@ -1,3 +1,5 @@
 h1. Movie Robot !https://secure.travis-ci.org/spencerkward/movierobot.png?branch=master(Build Status)!:http://travis-ci.org/spencerkward/movierobot
+
 h2. An application for finding good films on TV
-h3. By Spencer Ward and Simon Bannister
+
+By Spencer Ward and Simon Bannister
