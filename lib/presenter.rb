@@ -34,7 +34,7 @@ class Presenter
   def add_from_channels
     next_batch = @tv.get_next
     remove_duplicates next_batch
-    puts 'Next batch of ' + next_batch.count.to_s + ' showings being added'
+    puts "Next batch of #{next_batch.count} showings being added"
     @store.add next_batch
     gather_ratings next_batch
   end
@@ -50,7 +50,7 @@ class Presenter
       rating, image = @reviewer.review showing
       showing.rating = rating
       showing.image = image
-      puts "  Updated showing to " + showing.to_s
+      puts "  Updated showing to #{showing}"
     end
     @review_threads.delete Thread.current
     puts "Finishing a reviewing thread.  Now have #{@review_threads.size} review threads."

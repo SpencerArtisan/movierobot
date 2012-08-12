@@ -6,8 +6,6 @@ require 'presenter'
 require 'fixnum'
 
 class FilmServer
-  attr_writer :days_to_search
-
   def initialize presenter = Presenter.new
     @presenter = presenter
   end
