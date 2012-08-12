@@ -29,6 +29,7 @@ GEM
     nori (1.1.0)
     pg (0.14.0)
     rack (1.4.1)
+    rake (0.9.2.2)
     rspec (2.10.0)
       rspec-core (~> 2.10.0)
       rspec-expectations (~> 2.10.0)
@@ -60,6 +61,7 @@ DEPENDENCIES
   factory_girl_rspec
   imdb
   pg
+  rake
   rspec
   savon
   timecop
