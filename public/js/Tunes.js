@@ -5,7 +5,7 @@
 
   window.Movies = Backbone.Collection.extend({
     model: Movie,
-    url: "/movies",
+    url: "/films",
     comparator: function(movie) {
       return -movie.get('rating');
     }
