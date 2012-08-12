@@ -54,7 +54,7 @@ class Presenter
     end
     @review_threads.delete Thread.current
     puts "Finishing a reviewing thread.  Now have #{@review_threads.size} review threads."
-    @store.persist if @reviewing_threads.empty?
+    @store.persist if @review_threads.empty?
   end
 
   def remove_duplicates next_batch
