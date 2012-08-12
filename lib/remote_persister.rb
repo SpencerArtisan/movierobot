@@ -11,15 +11,19 @@ class RemotePersister
   end
 
   def reset
+    puts "* RESETTING REMOTE CACHE"
     @dalli_cache.delete @@key
   end
 
   def save data
+    puts "* SAVING DATA TO REMOTE CACHE: #{data[0..50]}..."
     @dalli_cache.set @@key, data
     data
   end
 
   def retrieve
-    @dalli_cache.get @@key
+    data = @dalli_cache.get @@key
+    puts "* RETRIEVING DATA FROM REMOTE CACHE #{data[0..50]}"
+    data
   end
 end
