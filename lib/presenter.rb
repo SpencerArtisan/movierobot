@@ -13,7 +13,11 @@ class Presenter
     @review_threads = []
   end
 
-  def build_cache cache_duration_in_seconds
+  def get_films
+    @store.get_json
+  end
+
+  def cache_films cache_duration_in_seconds
     @store.reset
     end_time = Time.now + cache_duration_in_seconds
     @tv.reset end_time
@@ -61,9 +65,5 @@ class Presenter
     next_batch.delete_if do |showing| 
       @store.contents.any? { |showing_in_cache| showing_in_cache.name == showing.name }
     end
-  end
-
-  def get_showings
-    @store.get_json
   end
 end

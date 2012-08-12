@@ -23,8 +23,8 @@ describe Presenter do
     reviewer.should_receive(:review).with(another_showing).and_return [9.2, 'image']
     tv.should_receive(:all_showings_retrieved?).and_return false, false, true
 
-    presenter.build_cache(0).should == [showing, another_showing].to_json
-    presenter.get_showings.should == [showing, another_showing].to_json
+    presenter.cache_films(0).should == [showing, another_showing].to_json
+    presenter.get_films.should == [showing, another_showing].to_json
     sleep 0.5
   end
 
@@ -32,16 +32,16 @@ describe Presenter do
     tv.should_receive(:reset)
     tv.should_receive(:get_next).and_return []
     tv.should_receive(:all_showings_retrieved?).and_return true
-    presenter.build_cache 0
-    presenter.get_showings.should == [].to_json
+    presenter.cache_films 0
+    presenter.get_films.should == [].to_json
   end
 
   it 'should integrate correctly with the Television class' do
     rovi_source = stub :get_next => ShowingBatch.new([], Time.now)
     real_tv = Television.new rovi_source
     presenter = Presenter.new real_tv, reviewer, store
-    presenter.build_cache 0
-    presenter.get_showings
+    presenter.cache_films 0
+    presenter.get_films
   end
 
   it 'should integrate correctly with the FilmReviewer class' do
@@ -50,8 +50,8 @@ describe Presenter do
     tv.should_receive(:all_showings_retrieved?).and_return true
     real_reviewer = FilmReviewer.new
     presenter = Presenter.new tv, real_reviewer, store
-    presenter.build_cache 0
-    presenter.get_showings
+    presenter.cache_films 0
+    presenter.get_films
   end
 
   it 'should integrate correctly with the Store class' do
@@ -61,7 +61,7 @@ describe Presenter do
     persister = stub :reset => nil, :save => nil, :retrieve => nil
     real_store = Store.new persister
     presenter = Presenter.new tv, stub, real_store
-    presenter.build_cache 0
-    presenter.get_showings
+    presenter.cache_films 0
+    presenter.get_films
   end
 end
