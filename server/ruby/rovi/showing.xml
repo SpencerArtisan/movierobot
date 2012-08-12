@@ -1,0 +1,37 @@
+<ListingsAiring>
+    <ProgramId>6778119</ProgramId>
+    <InstanceId xsi:nil="true" />
+    <UnknownInstance>false</UnknownInstance>
+    <UPId>XListImporte</UPId>
+    <Title>Day Watch</Title>
+    <Copy>An ancient war between light and darkness continues in Moscow. Konstantin Khabensky, Maria Poroshina, Dima Martynov.</Copy>
+    <AiringTime>2012-08-12T00:15:00Z</AiringTime>
+    <Duration>155</Duration>
+    <Color>Color</Color>
+    <AiringType>Unknown</AiringType>
+    <ShowingType>Unknown</ShowingType>
+    <CC>false</CC>
+    <LetterBox>false</LetterBox>
+    <Stereo>false</Stereo>
+    <HD>false</HD>
+    <SAP>false</SAP>
+    <TVRating>15</TVRating>
+    <MovieRating>R</MovieRating>
+    <Dolby>false</Dolby>
+    <DSS>false</DSS>
+    <HDLevel>HD Level Unknown</HDLevel>
+    <Sports>false</Sports>
+    <DVS>false</DVS>
+    <Category>Movie</Category>
+    <Subcategory>horror</Subcategory>
+    <SourceId>25409</SourceId>
+    <Channel>15</Channel>
+    <CallLetters>FF4</CallLetters>
+    <SourceDisplayName>FF4</SourceDisplayName>
+    <SourceLongName>Film4</SourceLongName>
+    <TiVoSupported>true</TiVoSupported>
+    <ParentNetworkId>0</ParentNetworkId>
+    <IconAvailable>false</IconAvailable>
+    <ServiceId>891296</ServiceId>
+    <DvbTriplet />
+</ListingsAiring>

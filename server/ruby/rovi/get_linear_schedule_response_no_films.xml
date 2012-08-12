@@ -1,0 +1,66 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <GetLinearScheduleResponse xmlns="http://api.rovicorp.com/v9/listings">
+            <GetLinearScheduleResult>
+                <RequestId xmlns="http://api.rovicorp.com/v9/common/types">895ca0f9-3c06-4468-b724-480e781ad3d9</RequestId>
+                <TimeStamp xmlns="http://api.rovicorp.com/v9/common/types">2012-08-11T21:39:46.133Z</TimeStamp>
+                <Status xmlns="http://api.rovicorp.com/v9/common/types">PNE</Status>
+                <Errors xmlns="http://api.rovicorp.com/v9/common/types" />
+                <EndTimestamp xmlns="http://api.rovicorp.com/v9/common/types">2012-08-11T21:39:46.133Z</EndTimestamp>
+                <Build xmlns="http://api.rovicorp.com/v9/common/types">CPS Phase v9 Build 9.11.0.6</Build>
+                <Schedule>
+                    <Locale>en-GB</Locale>
+                    <ServiceId>891296</ServiceId>
+                    <Name>South - Freeview</Name>
+                    <ServiceType>Cable</ServiceType>
+                    <StartDate>2012-08-11T21:39:45Z</StartDate>
+                    <Duration>240</Duration>
+                    <TimeZones>
+                        <TimeZoneInfo>
+                            <StartDateTime>2012-03-25T02:00:00Z</StartDateTime>
+                            <EndDateTime>2012-10-28T01:00:00Z</EndDateTime>
+                            <Offset>60</Offset>
+                        </TimeZoneInfo>
+                    </TimeZones>
+                    <Airings>
+                        <ListingsAiring>
+                            <ProgramId>15117904</ProgramId>
+                            <InstanceId xsi:nil="true" />
+                            <UnknownInstance>false</UnknownInstance>
+                            <UPId>XListImporte</UPId>
+                            <Title>BBC News</Title>
+                            <AiringTime>2012-08-11T23:00:00Z</AiringTime>
+                            <Duration>10</Duration>
+                            <Color>Color</Color>
+                            <AiringType>Unknown</AiringType>
+                            <ShowingType>Unknown</ShowingType>
+                            <CC>true</CC>
+                            <LetterBox>false</LetterBox>
+                            <Stereo>true</Stereo>
+                            <HD>false</HD>
+                            <SAP>false</SAP>
+                            <TVRating>None</TVRating>
+                            <Dolby>false</Dolby>
+                            <DSS>false</DSS>
+                            <HDLevel>HD Level Unknown</HDLevel>
+                            <Sports>false</Sports>
+                            <DVS>false</DVS>
+                            <Category>News</Category>
+                            <Subcategory>newscast</Subcategory>
+                            <SourceId>24872</SourceId>
+                            <Channel>1</Channel>
+                            <CallLetters>B1U</CallLetters>
+                            <SourceDisplayName>B1U</SourceDisplayName>
+                            <SourceLongName>BBC 1 - South</SourceLongName>
+                            <TiVoSupported>true</TiVoSupported>
+                            <ParentNetworkId>0</ParentNetworkId>
+                            <IconAvailable>false</IconAvailable>
+                            <ServiceId>891296</ServiceId>
+                            <DvbTriplet />
+                        </ListingsAiring>
+                    </Airings>
+                </Schedule>
+            </GetLinearScheduleResult>
+        </GetLinearScheduleResponse>
+    </soap:Body>
+</soap:Envelope>

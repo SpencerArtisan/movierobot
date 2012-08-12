@@ -1,0 +1,10 @@
+source :rubygems
+gem 'imdb'
+gem 'savon'
+gem 'timecop'
+gem 'rspec'
+gem 'amatch'
+gem 'pg'
+gem 'dalli'
+gem 'factory_girl'
+gem 'factory_girl_rspec'
