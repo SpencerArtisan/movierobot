@@ -1,1 +1,1 @@
-web: bundle exec ruby -Ilib lib/server.rb  $PORT
+web: bundle exec ruby -Ilib lib/sinatra_server.rb  $PORT

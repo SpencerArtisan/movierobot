@@ -46,6 +46,10 @@ GEM
       nokogiri (>= 1.4.0)
       nori (~> 1.1)
       wasabi (~> 2.1)
+    sinatra (1.2.3)
+      rack (~> 1.1)
+      tilt (>= 1.2.2, < 2.0)
+    tilt (1.3.3)
     timecop (0.3.5)
     tins (0.4.3)
     wasabi (2.1.1)
@@ -64,4 +68,5 @@ DEPENDENCIES
   rake
   rspec
   savon
+  sinatra (= 1.2.3)
   timecop
