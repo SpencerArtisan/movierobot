@@ -17,9 +17,9 @@ class MyServlet < WEBrick::HTTPServlet::AbstractServlet
 
   def do_GET(request, response)
     puts 'Request received'
-    @server.handleGET request, response
     response.status = 200
     response.content_type = "text/plain"
+    @server.handleGET request, response
   end 
 end
 
