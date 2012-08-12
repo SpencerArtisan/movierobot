@@ -25,6 +25,7 @@ describe Presenter do
 
     presenter.build_cache(0).should == [showing, another_showing].to_json
     presenter.get_showings.should == [showing, another_showing].to_json
+    sleep 0.5
   end
 
   it 'should handle the case where there are no showings at all' do
