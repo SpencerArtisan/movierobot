@@ -11,7 +11,11 @@ class FilmServer
   end
 
   def handleGET request, response
-    response.body = get_response_body request
+    begin
+      response.body = get_response_body request
+    rescue Exception => e
+      puts "!!! ERROR OCCURRED #{e.message} #{e.backtrace}"
+    end
   end 
 
   def get_response_body request
