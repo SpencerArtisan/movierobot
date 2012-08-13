@@ -14,7 +14,24 @@
   %body
     %h1 Films
 
-    .row-fluid
-    - @films.each do |film|
-      .span4
-        %img{:src => film['image']}
+    - @bigrows.each do |bigrow|
+      .row-fluid
+        - bigrow.contents.each do |big|
+          .span6
+            - if big.single?
+              =big.src
+            - else
+              - 2.times do
+                .row-fluid
+                  - big.contents.each do |medium|
+                    .span6
+                      - if medium.single?
+                        =medium.src
+                      - else
+                        - 2.times do
+                          .row-fluid
+                            - medium.contents.each do |small|
+                              .span6
+                                =small.src
+
+

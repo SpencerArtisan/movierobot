@@ -15,8 +15,37 @@ get "/" do
   send_file "public/index.html"
 end
 
+class Single
+  attr_reader :src
+
+  def initialize src
+    @src = src
+  end
+
+  def single?
+    true
+  end
+end
+
+class Mosaic
+  attr_reader :contents
+
+  def initialize contents
+  end
+
+  def single?
+    false
+  end
+
+  def contents
+    [Single.new("A"), Mosaic.new]
+  end
+end
+
+
 get "/nice" do
   @films = JSON.parse presenter.get_films
+  @bigrows = [Mosaic.new]
   haml :films
 end
 
