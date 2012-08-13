@@ -18,6 +18,7 @@ GEM
       rspec (>= 2.0)
     gyoku (0.4.4)
       builder (>= 2.1.2)
+    haml (3.1.7)
     hpricot (0.8.6)
     httpi (0.9.7)
       rack
@@ -63,6 +64,7 @@ DEPENDENCIES
   dalli
   factory_girl
   factory_girl_rspec
+  haml
   imdb
   pg
   rake

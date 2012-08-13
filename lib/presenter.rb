@@ -21,6 +21,7 @@ class Presenter
     @store.reset
     end_time = Time.now + cache_duration_in_seconds
     @tv.reset end_time
+    @review_threads = []
 
     puts "BEGINNING TO CACHE showings up to #{end_time}"
     add_showings_to_cache

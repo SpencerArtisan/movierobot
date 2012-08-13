@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %title Movie Robot
+    %link(rel="stylesheet" href="style/screen.css")
+    %link(rel="stylesheet" href="style/fancypants.css")
+    %link(rel="stylesheet" href="style/bootstrap.css")
+    %link(rel="stylesheet" href="style/bootstrap-responsive.css")
+    %script(src="js/vendor/modernizr-1.6.min.js")
+    %script(src="js/vendor/jquery-1.5.1.min.js")
+    %script(src="js/vendor/underscore.js")
+    %script(src="js/vendor/backbone.js")
+
+  %body
+    %h1 Films
+
+    .row-fluid
+    - @films.each do |film|
+      .span4
+        %img{:src => film['image']}

@@ -2,6 +2,8 @@ require "sinatra"
 require "net/http"
 require "presenter"
 require "fixnum"
+require 'haml'
+require 'json'
 
 # Set-up stuff
 STDOUT.sync = true
@@ -11,6 +13,11 @@ presenter = Presenter.new
 
 get "/" do
   send_file "public/index.html"
+end
+
+get "/nice" do
+  @films = JSON.parse presenter.get_films
+  haml :films
 end
 
 get "/films" do
