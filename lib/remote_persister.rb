@@ -1,14 +1,16 @@
 require 'dalli'
+require 'memcachier'
+require 'env'
 
 class RemotePersister
   TIMEOUT_S = 10
-  MAX_ATTEMPTS = 1000
+  MAX_ATTEMPTS = 10
   KEY = "json"
 
   def initialize
-    server = ENV['MEMCACHE_SERVERS'] || 'localhost:11211'
-    user = ENV['MEMCACHE_USERNAME']
-    password = ENV['MEMCACHE_PASSWORD']
+    server = ENV['MEMCACHIER_SERVERS'] || 'localhost:11211'
+    user = ENV['MEMCACHIER_USERNAME']
+    password = ENV['MEMCACHIER_PASSWORD']
 
     puts "Connecting to dalli server #{server}, username #{user}, password #{password}"
     cache = Dalli::Client.new server, :username => user, :password => password

@@ -31,21 +31,18 @@ class Mosaic
   attr_reader :contents
 
   def initialize contents
+    @contents = contents
   end
 
   def single?
     false
-  end
-
-  def contents
-    [Single.new("A"), Mosaic.new]
   end
 end
 
 
 get "/nice" do
   @films = JSON.parse presenter.get_films
-  @bigrows = [Mosaic.new]
+  @bigrows = [Mosaic.new([Single.new("A"), Mosaic.new([Single.new("B"), Single.new("C")])])]
   haml :films
 end
 
