@@ -18,7 +18,9 @@ GEM
       rspec (>= 2.0)
     gyoku (0.4.4)
       builder (>= 2.1.2)
-    haml (3.1.7)
+    haml (5.0.0)
+      temple (>= 0.8.0)
+      tilt
     hpricot (0.8.6)
     httpi (0.9.7)
       rack
@@ -51,6 +53,7 @@ GEM
     sinatra (1.2.3)
       rack (~> 1.1)
       tilt (>= 1.2.2, < 2.0)
+    temple (0.8.2)
     tilt (1.3.3)
     timecop (0.3.5)
     tins (0.4.3)
